@@ -18,7 +18,8 @@ public class RyanMinesweeperSolver{
          hasNextBoard = nextBoard(kb);
       }while(hasNextBoard);
    }
-
+   
+   //Main control method for solving a board. Returns false if "0 0" has been reached
    private static boolean nextBoard(Scanner kb)
    {
       numRows = kb.nextInt();
@@ -35,6 +36,7 @@ public class RyanMinesweeperSolver{
       return true;
    }
    
+   //Populates the created board using the input from kb.next() 
    private static void populateBoard(Scanner kb, char[][] board)
    {
       populateBoardEdge(board);
@@ -50,6 +52,7 @@ public class RyanMinesweeperSolver{
       }
    }
    
+   //Populates the boards "edge" buffer in order to simplify solving
    private static void populateBoardEdge(char[][] board){
 	   for(int curRow = 0; curRow < numRows+2; curRow++)
 	   {
@@ -63,6 +66,7 @@ public class RyanMinesweeperSolver{
 	   }
    }
    
+   //Solving method for the board
    private static void solveBoard(char[][] board){
       for(int y = 1; y <= numCols; y++)
       {
@@ -77,6 +81,7 @@ public class RyanMinesweeperSolver{
       }
    }
    
+   //Checks around a given coordinate for mines and returns number found
    private static int checkForSurroundingMines(int x, int y, char[][]board){
       int mines = 0;
       if(board[x-1][y-1] == '*')
@@ -115,6 +120,7 @@ public class RyanMinesweeperSolver{
       return mines;
    }
    
+   //Prints the board minus the edge buffer
    private static void printBoard(char[][] board){
       System.out.println("Field #" + curBoard + ":");
       for(int curRow = 1; curRow <= numRows; curRow++)
