@@ -1,5 +1,9 @@
+/**
+ * Ryan Bucherl - 1/9/2020 - Minesweeper input builder
+ */
+
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class MinesweeperInputBuilder
 {
