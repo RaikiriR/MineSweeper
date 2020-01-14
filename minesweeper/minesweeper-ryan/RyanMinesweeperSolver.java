@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class MinesweeperSolver{
+public class RyanMinesweeperSolver{
    private static int numRows, numCols, curBoard;
    
    public static void main(String[] args)

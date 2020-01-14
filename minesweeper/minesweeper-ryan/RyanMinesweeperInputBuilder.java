@@ -5,7 +5,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class MinesweeperInputBuilder
+public class RyanMinesweeperInputBuilder
 {
    public static void main(String[] args) throws FileNotFoundException
    {
